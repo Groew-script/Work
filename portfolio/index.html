@@ -23,7 +23,7 @@
   <link rel="stylesheet" href="style.css" />
 
   <!-- Favicon -->
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🚀</text></svg>" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='22' fill='%230a0e17'/><path d='M30 35 L18 50 L30 65 M70 35 L82 50 L70 65 M56 30 L44 70' stroke='%2306d6a0' stroke-width='8' stroke-linecap='round' stroke-linejoin='round' fill='none'/></svg>" />
 </head>
 
 <body>
@@ -55,9 +55,6 @@
         <li class="nav-item"><a class="nav-link-custom" href="#projects">Projetos</a></li>
         <li class="nav-item"><a class="nav-link-custom" href="#experience">Experiência</a></li>
         <li class="nav-item"><a class="nav-link-custom" href="#contact">Contacto</a></li>
-        <li class="nav-item">
-          <a class="btn-nav-cta nav-link-custom" href="#contact">Fale Comigo</a>
-        </li>
       </ul>
     </div>
 
@@ -138,41 +135,41 @@
 
           <div class="terminal-body" aria-label="Snippet de código de perfil">
             <div class="terminal-line">
-              <span class="t-comment">// Perfil Técnico — William Mateta</span>
+              <span class="t-comment">// developer.config.ts</span>
             </div>
-            <div class="terminal-line">&nbsp;</div>
             <div class="terminal-line">
-              <span class="t-keyword">const</span>
-              <span class="t-var"> dev</span>
+              <span class="t-keyword">export const</span>
+              <span class="t-var"> developer</span>
+              <span class="t-punct">:</span>
+              <span class="t-fn"> DeveloperProfile</span>
               <span class="t-punct"> = {</span>
             </div>
             <div class="terminal-line">
-              &nbsp;&nbsp;<span class="t-param">nome</span><span class="t-punct">:</span>
+              &nbsp;&nbsp;<span class="t-param">name</span><span class="t-punct">:</span>
               <span class="t-string"> "William André Mushi Mateta"</span><span class="t-punct">,</span>
             </div>
             <div class="terminal-line">
-              &nbsp;&nbsp;<span class="t-param">focoAtual</span><span class="t-punct">:</span>
+              &nbsp;&nbsp;<span class="t-param">role</span><span class="t-punct">:</span>
               <span class="t-string"> "Front-End Developer"</span><span class="t-punct">,</span>
             </div>
             <div class="terminal-line">
-              &nbsp;&nbsp;<span class="t-param">meta</span><span class="t-punct">:</span>
-              <span class="t-string"> "Full Stack Developer"</span><span class="t-punct">,</span>
+              &nbsp;&nbsp;<span class="t-param">location</span><span class="t-punct">:</span>
+              <span class="t-string"> "Luanda, Angola"</span><span class="t-punct">,</span>
             </div>
             <div class="terminal-line">
-              &nbsp;&nbsp;<span class="t-param">frontEnd</span><span class="t-punct">: [</span>
-              <span class="t-string">"HTML5"</span><span class="t-punct">,</span>
-              <span class="t-string"> "CSS3"</span><span class="t-punct">,</span>
-              <span class="t-string"> "JavaScript"</span><span class="t-punct">,</span>
-              <span class="t-string"> "React"</span><span class="t-punct">],</span>
+              &nbsp;&nbsp;<span class="t-param">stack</span><span class="t-punct">: {</span>
             </div>
             <div class="terminal-line">
-              &nbsp;&nbsp;<span class="t-param">aprendendoBackEnd</span><span class="t-punct">: [</span>
-              <span class="t-string">"Node.js"</span><span class="t-punct">,</span>
-              <span class="t-string"> "PHP"</span><span class="t-punct">,</span>
-              <span class="t-string"> "Java"</span><span class="t-punct">],</span>
+              &nbsp;&nbsp;&nbsp;&nbsp;<span class="t-param">frontEnd</span><span class="t-punct">: [</span><span class="t-string">"React"</span><span class="t-punct">,</span> <span class="t-string">"JavaScript"</span><span class="t-punct">,</span> <span class="t-string">"HTML5"</span><span class="t-punct">,</span> <span class="t-string">"CSS3"</span><span class="t-punct">],</span>
             </div>
             <div class="terminal-line">
-              &nbsp;&nbsp;<span class="t-param">disponivel</span><span class="t-punct">:</span>
+              &nbsp;&nbsp;&nbsp;&nbsp;<span class="t-param">learning</span><span class="t-punct">: [</span><span class="t-string">"Node.js"</span><span class="t-punct">,</span> <span class="t-string">"TypeScript"</span><span class="t-punct">,</span> <span class="t-string">"PHP"</span><span class="t-punct">,</span> <span class="t-string">"Java"</span><span class="t-punct">]</span>
+            </div>
+            <div class="terminal-line">
+              &nbsp;&nbsp;<span class="t-punct">},</span>
+            </div>
+            <div class="terminal-line">
+              &nbsp;&nbsp;<span class="t-param">availableForHire</span><span class="t-punct">:</span>
               <span class="t-keyword"> true</span>
             </div>
             <div class="terminal-line">
@@ -180,12 +177,12 @@
             </div>
             <div class="terminal-line">&nbsp;</div>
             <div class="terminal-line">
-              <span class="t-fn">console</span><span class="t-punct">.</span><span class="t-fn">log</span><span class="t-punct">(</span><span class="t-string">"Pronto para aprender, colaborar e criar soluções!"</span><span class="t-punct">);</span>
-            </div>
-            <div class="terminal-line">&nbsp;</div>
-            <div class="terminal-line">
               <span class="terminal-prompt">$</span>
-              <span class="t-string">"Status: Dedicação total &amp; evolução constante 🚀"</span>
+              <span class="t-fn">echo</span>
+              <span class="t-string"> $developer.status</span>
+            </div>
+            <div class="terminal-line">
+              <span class="t-comment">&gt; Pronto para novos desafios e projetos.</span>
             </div>
           </div>
 
@@ -218,7 +215,9 @@
           <div class="about-corner-deco tl" aria-hidden="true"></div>
           <div class="about-corner-deco br" aria-hidden="true"></div>
 
-          <div class="about-badge">🟢 Disponível para Oportunidades</div>
+          <div class="about-badge">
+            <span class="status-pulse" aria-hidden="true"></span> Disponível para Oportunidades
+          </div>
         </div>
       </div>
 
@@ -226,14 +225,14 @@
       <div class="col-lg-7 reveal-right">
         <span class="section-label">Sobre Mim</span>
         <h2 class="section-title">
-          Técnico em Informática com Paixão por <span class="gradient-text">Desenvolvimento Web</span>
+          Técnico de Informática focado em <span class="gradient-text">Desenvolvimento Web</span>
         </h2>
 
         <p class="about-bio">
-          Sou <strong>Técnico Médio em Informática</strong> formado pelo <strong>Instituto Politécnico Privado Anherc (I.P.P.A)</strong>, com histórico prático em manutenção preventiva/corretiva e suporte a sistemas.
+          Sou <strong>Técnico Médio em Informática</strong> formado pelo <strong>Instituto Politécnico Privado Anherc (I.P.P.A)</strong>, com sólida vivência prática em diagnóstico, manutenção preventiva/corretiva e suporte a sistemas.
         </p>
         <p class="about-bio">
-          Tenho como meta sólida a atuação como <strong>Desenvolvedor Full Stack</strong>, iniciando minha trajetória com foco e disciplina no <strong>Front-End</strong> (HTML5, CSS3, JavaScript, React). Possuo grande facilidade de aprendizado, boa comunicação e espírito de equipa para agregar valor a equipas de tecnologia e projetos desafiadores.
+          Estou a direcionar a minha carreira para <strong>Desenvolvimento Web</strong> com base sólida no <strong>Front-End</strong> (HTML5 semântico, CSS3 moderno, JavaScript e React), com o objetivo contínuo de evoluir para <strong>Full Stack</strong>. Valorizo a escrita de código limpo, resolução prática de problemas e trabalho colaborativo em equipa.
         </p>
 
         <!-- Informações Pessoais & Formação -->
@@ -258,15 +257,15 @@
         <div class="about-stats">
           <div class="stat-item">
             <div class="stat-number" data-target="3" data-suffix="+">0+</div>
-            <div class="stat-label">Anos em TI / Suporte</div>
-          </div>
-          <div class="stat-item">
-            <div class="stat-number" data-target="100" data-suffix="%">0%</div>
-            <div class="stat-label">Dedicação & Foco</div>
+            <div class="stat-label">Anos em Suporte & TI</div>
           </div>
           <div class="stat-item">
             <div class="stat-number" data-target="10" data-suffix="+">0+</div>
             <div class="stat-label">Cursos & Certificados</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-number" data-target="4" data-suffix="+">0+</div>
+            <div class="stat-label">Projetos & Aplicações</div>
           </div>
         </div>
 
@@ -294,9 +293,9 @@
     <div class="row justify-content-center text-center mb-5">
       <div class="col-lg-8 reveal">
         <span class="section-label">Tecnologias &amp; Conhecimentos</span>
-        <h2 class="section-title">Minha Caixa de Ferramentas</h2>
+        <h2 class="section-title">Habilidades Técnicas</h2>
         <p class="section-subtitle mx-auto">
-          Dominando o <strong>Front-End</strong> e construindo a base completa para me tornar <strong>Full Stack</strong>.
+          Foco ativo no desenvolvimento <strong>Front-End</strong> e fundamentos contínuos para a trilha <strong>Full Stack</strong>.
         </p>
       </div>
     </div>
@@ -305,60 +304,56 @@
     <div class="mb-5">
       <div class="reveal">
         <span class="skills-category-title">
-          <i class="fa-solid fa-code me-2" style="color: var(--accent-primary);"></i> Front-End (Foco Ativo)
+          <i class="fa-solid fa-code me-2" style="color: var(--accent-primary);"></i> Front-End (Especialização)
         </span>
       </div>
-      <div class="row g-3">
+      <div class="row g-4">
 
-        <div class="col-6 col-md-4 col-lg-3 reveal reveal-delay-1">
-          <div class="skill-card text-center">
-            <div class="skill-icon mx-auto" style="color:#e34f26;">
-              <i class="fa-brands fa-html5"></i>
+        <div class="col-sm-6 col-lg-3 reveal reveal-delay-1">
+          <div class="skill-card">
+            <div class="skill-card-header">
+              <div class="skill-icon" style="color:#e34f26;">
+                <i class="fa-brands fa-html5"></i>
+              </div>
+              <h3 class="skill-name">HTML5</h3>
             </div>
-            <div class="skill-name">HTML5</div>
-            <div class="skill-bar-track">
-              <div class="skill-bar-fill" data-width="90"></div>
-            </div>
-            <div class="skill-level">Estrutura & Semântica (90%)</div>
+            <p class="skill-desc">Estruturação de documentos semânticos, acessibilidade (a11y) e boas práticas de SEO.</p>
           </div>
         </div>
 
-        <div class="col-6 col-md-4 col-lg-3 reveal reveal-delay-2">
-          <div class="skill-card text-center">
-            <div class="skill-icon mx-auto" style="color:#264de4;">
-              <i class="fa-brands fa-css3-alt"></i>
+        <div class="col-sm-6 col-lg-3 reveal reveal-delay-2">
+          <div class="skill-card">
+            <div class="skill-card-header">
+              <div class="skill-icon" style="color:#264de4;">
+                <i class="fa-brands fa-css3-alt"></i>
+              </div>
+              <h3 class="skill-name">CSS3</h3>
             </div>
-            <div class="skill-name">CSS3 & Responsividade</div>
-            <div class="skill-bar-track">
-              <div class="skill-bar-fill" data-width="85"></div>
-            </div>
-            <div class="skill-level">Flexbox, Grid & Media Queries (85%)</div>
+            <p class="skill-desc">Layouts modernos e fluidos, design responsivo para múltiplos ecrãs e transições dinâmicas.</p>
           </div>
         </div>
 
-        <div class="col-6 col-md-4 col-lg-3 reveal reveal-delay-3">
-          <div class="skill-card text-center">
-            <div class="skill-icon mx-auto" style="color:#f7df1e;">
-              <i class="fa-brands fa-js"></i>
+        <div class="col-sm-6 col-lg-3 reveal reveal-delay-3">
+          <div class="skill-card">
+            <div class="skill-card-header">
+              <div class="skill-icon" style="color:#f7df1e;">
+                <i class="fa-brands fa-js"></i>
+              </div>
+              <h3 class="skill-name">JavaScript</h3>
             </div>
-            <div class="skill-name">JavaScript</div>
-            <div class="skill-bar-track">
-              <div class="skill-bar-fill" data-width="75"></div>
-            </div>
-            <div class="skill-level">DOM, Funções & Lógica (75%)</div>
+            <p class="skill-desc">Programação assíncrona, manipulação dinâmica do DOM, consumo de APIs e lógica de eventos.</p>
           </div>
         </div>
 
-        <div class="col-6 col-md-4 col-lg-3 reveal reveal-delay-4">
-          <div class="skill-card text-center">
-            <div class="skill-icon mx-auto" style="color:#61dafb;">
-              <i class="fa-brands fa-react"></i>
+        <div class="col-sm-6 col-lg-3 reveal reveal-delay-4">
+          <div class="skill-card">
+            <div class="skill-card-header">
+              <div class="skill-icon" style="color:#61dafb;">
+                <i class="fa-brands fa-react"></i>
+              </div>
+              <h3 class="skill-name">React</h3>
             </div>
-            <div class="skill-name">React</div>
-            <div class="skill-bar-track">
-              <div class="skill-bar-fill" data-width="60"></div>
-            </div>
-            <div class="skill-level">Componentes & Hooks (Em estudo ativo)</div>
+            <p class="skill-desc">Construção de interfaces modulares baseadas em componentes, gestão de estado e propriedades.</p>
           </div>
         </div>
 
@@ -369,124 +364,123 @@
     <div class="mb-5">
       <div class="reveal">
         <span class="skills-category-title">
-          <i class="fa-solid fa-server me-2" style="color: var(--accent-secondary);"></i> Trilha Back-End (Caminho Full Stack)
+          <i class="fa-solid fa-server me-2" style="color: var(--accent-secondary);"></i> Trilha Back-End (Em Expansão)
         </span>
       </div>
-      <div class="row g-3">
+      <div class="row g-4">
 
-        <div class="col-6 col-md-4 col-lg-3 reveal reveal-delay-1">
-          <div class="skill-card text-center">
-            <div class="skill-icon mx-auto" style="color:#00d4aa;">
-              <i class="fa-solid fa-brain"></i>
+        <div class="col-sm-6 col-lg-3 reveal reveal-delay-1">
+          <div class="skill-card">
+            <div class="skill-card-header">
+              <div class="skill-icon" style="color:#00d4aa;">
+                <i class="fa-solid fa-brain"></i>
+              </div>
+              <h3 class="skill-name">Lógica & Algoritmos</h3>
             </div>
-            <div class="skill-name">Lógica de Programação</div>
-            <div class="skill-bar-track">
-              <div class="skill-bar-fill" data-width="85"></div>
-            </div>
-            <div class="skill-level">Algoritmos & Resolução de Problemas</div>
+            <p class="skill-desc">Resolução metódica de problemas computacionais, estruturas de decisão e fluxo de dados.</p>
           </div>
         </div>
 
-        <div class="col-6 col-md-4 col-lg-3 reveal reveal-delay-2">
-          <div class="skill-card text-center">
-            <div class="skill-icon mx-auto" style="color:#777bb4;">
-              <i class="fa-brands fa-php"></i>
+        <div class="col-sm-6 col-lg-3 reveal reveal-delay-2">
+          <div class="skill-card">
+            <div class="skill-card-header">
+              <div class="skill-icon" style="color:#777bb4;">
+                <i class="fa-brands fa-php"></i>
+              </div>
+              <h3 class="skill-name">PHP</h3>
             </div>
-            <div class="skill-name">PHP</div>
-            <div class="skill-bar-track">
-              <div class="skill-bar-fill" data-width="50"></div>
-            </div>
-            <div class="skill-level">Fundamentos & Integração Web</div>
+            <p class="skill-desc">Fundamentos do processamento no servidor, envio de formulários e integração dinâmica na web.</p>
           </div>
         </div>
 
-        <div class="col-6 col-md-4 col-lg-3 reveal reveal-delay-3">
-          <div class="skill-card text-center">
-            <div class="skill-icon mx-auto" style="color:#e76f00;">
-              <i class="fa-brands fa-java"></i>
+        <div class="col-sm-6 col-lg-3 reveal reveal-delay-3">
+          <div class="skill-card">
+            <div class="skill-card-header">
+              <div class="skill-icon" style="color:#e76f00;">
+                <i class="fa-brands fa-java"></i>
+              </div>
+              <h3 class="skill-name">Java</h3>
             </div>
-            <div class="skill-name">Java</div>
-            <div class="skill-bar-track">
-              <div class="skill-bar-fill" data-width="50"></div>
-            </div>
-            <div class="skill-level">Conceitos de POO</div>
+            <p class="skill-desc">Compreensão de orientação a objetos (POO), classes, herança, encapsulamento e tipagem.</p>
           </div>
         </div>
-
-        <div class="col-6 col-md-4 col-lg-3 reveal reveal-delay-4">
-          <div class="skill-card text-center">
-            <div class="skill-icon mx-auto" style="color:#339933;">
-              <i class="fa-brands fa-node-js"></i>
-            </div>
-            <div class="skill-name">Node.js</div>
-            <div class="skill-bar-track">
-              <div class="skill-bar-fill" data-width="50"></div>
-            </div>
-            <div class="skill-level">APIs REST & Servidores Web</div>
-          </div>
-        </div>
-
       </div>
     </div>
 
-    <!-- 3. TI, Suporte e Soft Skills -->
+    <!-- 3. TI, Suporte e Prática Profissional -->
     <div>
       <div class="reveal">
         <span class="skills-category-title">
-          <i class="fa-solid fa-screwdriver-wrench me-2"></i> TI, Ferramentas & Soft Skills
+          <i class="fa-solid fa-screwdriver-wrench me-2"></i> Suporte Técnico &amp; Ferramentas
         </span>
       </div>
-      <div class="row g-3">
+      <div class="row g-4">
 
-        <div class="col-6 col-md-4 col-lg-3 reveal reveal-delay-1">
-          <div class="skill-card text-center">
-            <div class="skill-icon mx-auto" style="color:#f05032;">
-              <i class="fa-brands fa-git-alt"></i>
+        <div class="col-sm-6 col-lg-3 reveal reveal-delay-1">
+          <div class="skill-card">
+            <div class="skill-card-header">
+              <div class="skill-icon" style="color:#f05032;">
+                <i class="fa-brands fa-git-alt"></i>
+              </div>
+              <h3 class="skill-name">Git & GitHub</h3>
             </div>
-            <div class="skill-name">Git & GitHub</div>
-            <div class="skill-bar-track">
-              <div class="skill-bar-fill" data-width="70"></div>
+            <p class="skill-desc">Controlo de versões distribuído, boas práticas de commits, ramificações e repositórios remotos.</p>
+            <div class="skill-tags">
+              <span class="skill-tag-pill">Versionamento</span>
+              <span class="skill-tag-pill">Git Flow</span>
+              <span class="skill-tag-pill">Commits</span>
             </div>
-            <div class="skill-level">Versionamento & Commits</div>
           </div>
         </div>
 
-        <div class="col-6 col-md-4 col-lg-3 reveal reveal-delay-2">
-          <div class="skill-card text-center">
-            <div class="skill-icon mx-auto" style="color:#007acc;">
-              <i class="fa-solid fa-laptop-code"></i>
+        <div class="col-sm-6 col-lg-3 reveal reveal-delay-2">
+          <div class="skill-card">
+            <div class="skill-card-header">
+              <div class="skill-icon" style="color:#007acc;">
+                <i class="fa-solid fa-laptop-code"></i>
+              </div>
+              <h3 class="skill-name">Suporte & Manutenção</h3>
             </div>
-            <div class="skill-name">Suporte & Manutenção</div>
-            <div class="skill-bar-track">
-              <div class="skill-bar-fill" data-width="90"></div>
+            <p class="skill-desc">Diagnóstico técnico, instalação de sistemas operativos, configuração de redes locais e hardware.</p>
+            <div class="skill-tags">
+              <span class="skill-tag-pill">Hardware</span>
+              <span class="skill-tag-pill">Redes</span>
+              <span class="skill-tag-pill">Sistemas</span>
             </div>
-            <div class="skill-level">Hardware, Redes & Software (3 anos)</div>
           </div>
         </div>
 
-        <div class="col-6 col-md-4 col-lg-3 reveal reveal-delay-3">
-          <div class="skill-card text-center">
-            <div class="skill-icon mx-auto" style="color:#00d4aa;">
-              <i class="fa-solid fa-users"></i>
+        <div class="col-sm-6 col-lg-3 reveal reveal-delay-3">
+          <div class="skill-card">
+            <div class="skill-card-header">
+              <div class="skill-icon" style="color:#00d4aa;">
+                <i class="fa-solid fa-users"></i>
+              </div>
+              <h3 class="skill-name">Atendimento & Apoio</h3>
             </div>
-            <div class="skill-name">Comunicação & Equipa</div>
-            <div class="skill-bar-track">
-              <div class="skill-bar-fill" data-width="95"></div>
+            <p class="skill-desc">Comunicação clara com clientes e utilizadores, levantamento de incidentes e trabalho colaborativo.</p>
+            <div class="skill-tags">
+              <span class="skill-tag-pill">Colaboração</span>
+              <span class="skill-tag-pill">Atendimento</span>
+              <span class="skill-tag-pill">Empatia</span>
             </div>
-            <div class="skill-level">Atendimento & Colaboração</div>
           </div>
         </div>
 
-        <div class="col-6 col-md-4 col-lg-3 reveal reveal-delay-4">
-          <div class="skill-card text-center">
-            <div class="skill-icon mx-auto" style="color:#ffb703;">
-              <i class="fa-solid fa-bolt"></i>
+        <div class="col-sm-6 col-lg-3 reveal reveal-delay-4">
+          <div class="skill-card">
+            <div class="skill-card-header">
+              <div class="skill-icon" style="color:#ffb703;">
+                <i class="fa-solid fa-bolt"></i>
+              </div>
+              <h3 class="skill-name">Evolução Contínua</h3>
             </div>
-            <div class="skill-name">Aprendizado Rápido</div>
-            <div class="skill-bar-track">
-              <div class="skill-bar-fill" data-width="95"></div>
+            <p class="skill-desc">Capacidade de aprendizagem rápida com autonomia, disciplina de estudos e adaptação a novas ferramentas.</p>
+            <div class="skill-tags">
+              <span class="skill-tag-pill">Autonomia</span>
+              <span class="skill-tag-pill">Proatividade</span>
+              <span class="skill-tag-pill">Disciplina</span>
             </div>
-            <div class="skill-level">Autonomia, Foco & Curiosidade</div>
           </div>
         </div>
 
@@ -526,10 +520,10 @@
             </div>
           </div>
           <div class="project-body">
-            <div class="project-featured-badge">// Destaque Front-End</div>
+            <span class="project-category-badge">Front-End</span>
             <h3 class="project-title">Portfólio Dark Theme</h3>
             <p class="project-desc">
-              Landing page responsiva com tema escuro, animação de partículas em Canvas, efeito de digitação dinâmico, animações com Intersection Observer e terminal interativo.
+              Landing page responsiva desenvolvida com CSS moderno, JavaScript nativo, manipulação dinâmica e transições suaves com Intersection Observer.
             </p>
             <div class="project-tags">
               <span class="project-tag">HTML5</span>
@@ -539,7 +533,7 @@
             </div>
             <div class="project-links">
               <a href="#hero" class="btn-project btn-project-filled">
-                <i class="fa-solid fa-arrow-up-right-from-square"></i> Ver Aqui Mesmo
+                <i class="fa-solid fa-arrow-up-right-from-square"></i> Ver Demonstração
               </a>
             </div>
           </div>
@@ -558,19 +552,19 @@
             </div>
           </div>
           <div class="project-body">
-            <div class="project-featured-badge">// Em Desenvolvimento</div>
+            <span class="project-category-badge">Em Desenvolvimento</span>
             <h3 class="project-title">Dashboard &amp; Componentes Web</h3>
             <p class="project-desc">
-              Conjunto de componentes reutilizáveis focados em experiência do utilizador (UX): tabelas dinâmicas, modais, filtros e validação de formulários em tempo real.
+              Módulos reutilizáveis voltados para experiência do utilizador: tabelas dinâmicas com filtragem, janelas modais e validação de formulários em tempo real.
             </p>
             <div class="project-tags">
               <span class="project-tag">JavaScript</span>
               <span class="project-tag">CSS Flex/Grid</span>
-              <span class="project-tag">React (Estudo)</span>
+              <span class="project-tag">React</span>
             </div>
             <div class="project-links">
               <a href="#contact" class="btn-project btn-project-outline">
-                <i class="fa-solid fa-code-branch"></i> Em Criação
+                <i class="fa-solid fa-code-branch"></i> Em Construção
               </a>
             </div>
           </div>
@@ -589,14 +583,14 @@
             </div>
           </div>
           <div class="project-body">
-            <div class="project-featured-badge">// Roteiro Full Stack</div>
+            <span class="project-category-badge">Full Stack</span>
             <h3 class="project-title">Sistema de Gestão &amp; Suporte</h3>
             <p class="project-desc">
-              Aplicação para controle de chamados de suporte técnico, integrando frontend moderno com endpoints de backend e banco de dados.
+              Plataforma para gestão de pedidos e chamados de suporte técnico, unindo interface de utilizador a serviços de backend e bases de dados.
             </p>
             <div class="project-tags">
               <span class="project-tag">Front-End</span>
-              <span class="project-tag">Node / PHP</span>
+              <span class="project-tag">Node.js</span>
               <span class="project-tag">SQL</span>
             </div>
             <div class="project-links">
@@ -896,7 +890,7 @@
       </div>
       <div class="col-md-6 text-md-end">
         <p class="footer-copy mb-0">
-          Inspirado em Colorlib Trace Developer &mdash;
+          Desenvolvido com foco em código limpo e boas práticas &mdash;
           <a href="#hero" style="color:var(--accent-primary);">Voltar ao topo ↑</a>
         </p>
       </div>

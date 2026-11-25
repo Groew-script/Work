@@ -595,13 +595,25 @@ section {
   background: var(--accent-primary);
   color: var(--bg-primary);
   font-family: var(--font-mono);
-  font-size: 0.7rem;
+  font-size: 0.72rem;
   font-weight: 700;
   padding: 8px 14px;
   border-radius: var(--radius-sm);
-  letter-spacing: 1px;
+  letter-spacing: 0.5px;
   z-index: 2;
   box-shadow: 0 4px 16px rgba(6, 214, 160, 0.4);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.status-pulse {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  background: var(--bg-primary);
+  border-radius: 50%;
+  animation: pulse-dot 1.5s infinite;
 }
 
 .about-bio {
@@ -667,10 +679,13 @@ section {
   background: var(--bg-card);
   border: 1px solid var(--border-color);
   border-radius: var(--radius-md);
-  padding: 24px 20px;
+  padding: 22px 20px;
   transition: all var(--transition-med);
   position: relative;
   overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 }
 
 .skill-card::before {
@@ -687,7 +702,7 @@ section {
 }
 
 .skill-card:hover {
-  border-color: rgba(6, 214, 160, 0.3);
+  border-color: rgba(6, 214, 160, 0.35);
   transform: translateY(-4px);
   box-shadow: 0 12px 32px rgba(0,0,0,0.3), var(--shadow-glow);
 }
@@ -696,47 +711,62 @@ section {
   transform: scaleX(1);
 }
 
+.skill-card-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
 .skill-icon {
-  width: 48px;
-  height: 48px;
+  width: 44px;
+  height: 44px;
+  min-width: 44px;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 1.6rem;
-  margin-bottom: 12px;
+  font-size: 1.5rem;
   border-radius: var(--radius-sm);
   background: var(--bg-surface);
   border: 1px solid var(--border-color);
+  margin-bottom: 0;
 }
 
 .skill-name {
-  font-size: 0.9rem;
-  font-weight: 600;
+  font-size: 0.95rem;
+  font-weight: 700;
   color: var(--text-primary);
-  margin-bottom: 10px;
+  margin-bottom: 0;
 }
 
-.skill-bar-track {
-  height: 4px;
-  background: var(--bg-surface);
-  border-radius: 2px;
-  overflow: hidden;
+.skill-desc {
+  font-size: 0.84rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+  margin-bottom: 14px;
+  flex: 1;
 }
 
-.skill-bar-fill {
-  height: 100%;
-  background: linear-gradient(90deg, var(--accent-primary), var(--accent-secondary));
-  border-radius: 2px;
-  width: 0;
-  transition: width 1.2s cubic-bezier(0.4, 0, 0.2, 1);
+.skill-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
 }
 
-.skill-level {
+.skill-tag-pill {
   font-family: var(--font-mono);
   font-size: 0.7rem;
   color: var(--text-muted);
-  text-align: right;
-  margin-top: 5px;
+  background: var(--bg-surface);
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  padding: 2px 8px;
+  transition: all var(--transition-fast);
+}
+
+.skill-card:hover .skill-tag-pill {
+  border-color: rgba(6, 214, 160, 0.25);
+  color: var(--text-secondary);
 }
 
 /* ============================================
@@ -810,6 +840,22 @@ section {
   letter-spacing: 2px;
   text-transform: uppercase;
   margin-bottom: 8px;
+}
+
+.project-category-badge {
+  display: inline-block;
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  font-weight: 600;
+  color: var(--accent-primary);
+  background: rgba(6, 214, 160, 0.08);
+  border: 1px solid rgba(6, 214, 160, 0.2);
+  border-radius: var(--radius-sm);
+  padding: 3px 10px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+  width: fit-content;
 }
 
 .project-title {

@@ -114,9 +114,8 @@ function initTypingAnimation() {
   const phrases = [
     'Front-End Developer',
     'Técnico de Informática',
-    'Futuro Full Stack Developer',
-    'Entusiasta de JavaScript & React',
-    'Apaixonado por Tecnologia',
+    'Desenvolvedor Web',
+    'Focado em Interfaces Responsivas',
   ];
 
   let phraseIndex   = 0;
@@ -331,12 +330,12 @@ function initContactForm() {
     const origHTML = btn.innerHTML;
 
     // Simulate sending
-    btn.innerHTML  = '<i class="fa-solid fa-spinner fa-spin"></i> Sending…';
+    btn.innerHTML  = '<i class="fa-solid fa-spinner fa-spin"></i> A enviar...';
     btn.disabled   = true;
 
     setTimeout(() => {
-      btn.innerHTML = '<i class="fa-solid fa-check"></i> Message Sent!';
-      showToast('✅ Message sent successfully! I\'ll get back to you soon.');
+      btn.innerHTML = '<i class="fa-solid fa-check"></i> Mensagem Enviada!';
+      showToast('Mensagem enviada com sucesso! Entrarei em contacto em breve.');
       form.reset();
 
       setTimeout(() => {
@@ -450,7 +449,6 @@ onReady(() => {
   initTypingAnimation();
   initParticles();
   initScrollReveal();
-  initSkillBars();
   initContactForm();
   initCounters();
   initHashNav();
