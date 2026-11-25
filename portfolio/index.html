@@ -1,0 +1,918 @@
+<!DOCTYPE html>
+<html lang="pt" data-bs-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="William Mateta — Técnico de Informática & Desenvolvedor Front-End com aspiração a Full Stack. Portfólio de projetos, competências e experiência." />
+  <meta name="author" content="William André Mushi Mateta" />
+
+  <title>William Mateta · Front-End Developer</title>
+
+  <!-- Google Fonts: Inter + JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Bootstrap 5.3 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+  <!-- Font Awesome 6 -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet" />
+
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- Favicon -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🚀</text></svg>" />
+</head>
+
+<body>
+
+<!-- ============================================================
+     NAVBAR
+     ============================================================ -->
+<nav id="navbar" class="navbar navbar-expand-lg" aria-label="Navegação principal">
+  <div class="container">
+
+    <!-- Brand / Logo -->
+    <a class="navbar-brand" href="#hero">
+      <span class="brand-dot" aria-hidden="true"></span>
+      WM<span class="accent">.</span>dev
+    </a>
+
+    <!-- Mobile toggler -->
+    <button class="navbar-toggler border-0" id="navbarToggler" type="button"
+            data-bs-toggle="collapse" data-bs-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <i class="fa-solid fa-bars" style="color: var(--text-secondary); font-size: 1.1rem;"></i>
+    </button>
+
+    <!-- Nav links -->
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto align-items-lg-center">
+        <li class="nav-item"><a class="nav-link-custom" href="#about">Sobre</a></li>
+        <li class="nav-item"><a class="nav-link-custom" href="#skills">Competências</a></li>
+        <li class="nav-item"><a class="nav-link-custom" href="#projects">Projetos</a></li>
+        <li class="nav-item"><a class="nav-link-custom" href="#experience">Experiência</a></li>
+        <li class="nav-item"><a class="nav-link-custom" href="#contact">Contacto</a></li>
+        <li class="nav-item">
+          <a class="btn-nav-cta nav-link-custom" href="#contact">Fale Comigo</a>
+        </li>
+      </ul>
+    </div>
+
+  </div>
+</nav>
+
+<!-- ============================================================
+     HERO SECTION
+     ============================================================ -->
+<section id="hero">
+  <canvas id="particles-canvas"></canvas>
+
+  <div class="gradient-orb hero-orb-1" aria-hidden="true"></div>
+  <div class="gradient-orb hero-orb-2" aria-hidden="true"></div>
+  <div class="dots-bg" aria-hidden="true"></div>
+
+  <div class="container hero-content">
+    <div class="row align-items-center g-5">
+
+      <!-- Coluna Esquerda: Apresentação -->
+      <div class="col-lg-6">
+        <p class="hero-greeting reveal">Olá, eu sou</p>
+
+        <h1 class="hero-name reveal reveal-delay-1">
+          William Mateta
+        </h1>
+
+        <div class="hero-title-wrapper reveal reveal-delay-2">
+          <span>Eu sou</span>
+          <span class="typing-text" aria-live="polite"></span>
+          <span class="cursor-blink" aria-hidden="true"></span>
+        </div>
+
+        <p class="hero-bio reveal reveal-delay-3">
+          Técnico de Informática com sólida base em manutenção, software e lógica.
+          Atualmente concentrado e dedicado ao <strong>Front-End</strong> (HTML5, CSS3, JavaScript e React), com o objetivo e a rota traçada para me tornar um <strong>Full Stack Developer</strong> completo.
+        </p>
+
+        <!-- CTA Buttons -->
+        <div class="hero-cta-group reveal reveal-delay-4">
+          <a href="#projects" class="btn-primary-custom">
+            <i class="fa-solid fa-code"></i>
+            Ver Projetos
+          </a>
+          <a href="CV_William_Mateta.pdf" download="CV_William_Mateta.pdf" class="btn-outline-custom">
+            <i class="fa-solid fa-file-arrow-down"></i>
+            Baixar CV
+          </a>
+        </div>
+
+        <!-- Social links -->
+        <div class="hero-socials reveal reveal-delay-5">
+          <a href="mailto:williammateta.dev@gmail.com" class="social-link" aria-label="Email" title="williammateta.dev@gmail.com">
+            <i class="fa-solid fa-envelope"></i>
+          </a>
+          <a href="https://wa.me/244932651805" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="WhatsApp" title="+244 932 651 805">
+            <i class="fa-brands fa-whatsapp"></i>
+          </a>
+          <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="GitHub" title="GitHub">
+            <i class="fa-brands fa-github"></i>
+          </a>
+          <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="LinkedIn" title="LinkedIn">
+            <i class="fa-brands fa-linkedin-in"></i>
+          </a>
+        </div>
+      </div>
+
+      <!-- Coluna Direita: Terminal Code -->
+      <div class="col-lg-6">
+        <div class="hero-terminal reveal-right">
+
+          <div class="terminal-header">
+            <span class="terminal-dot red" aria-hidden="true"></span>
+            <span class="terminal-dot yellow" aria-hidden="true"></span>
+            <span class="terminal-dot green" aria-hidden="true"></span>
+            <span class="terminal-title">~/developer/william.ts</span>
+          </div>
+
+          <div class="terminal-body" aria-label="Snippet de código de perfil">
+            <div class="terminal-line">
+              <span class="t-comment">// Perfil Técnico — William Mateta</span>
+            </div>
+            <div class="terminal-line">&nbsp;</div>
+            <div class="terminal-line">
+              <span class="t-keyword">const</span>
+              <span class="t-var"> dev</span>
+              <span class="t-punct"> = {</span>
+            </div>
+            <div class="terminal-line">
+              &nbsp;&nbsp;<span class="t-param">nome</span><span class="t-punct">:</span>
+              <span class="t-string"> "William André Mushi Mateta"</span><span class="t-punct">,</span>
+            </div>
+            <div class="terminal-line">
+              &nbsp;&nbsp;<span class="t-param">focoAtual</span><span class="t-punct">:</span>
+              <span class="t-string"> "Front-End Developer"</span><span class="t-punct">,</span>
+            </div>
+            <div class="terminal-line">
+              &nbsp;&nbsp;<span class="t-param">meta</span><span class="t-punct">:</span>
+              <span class="t-string"> "Full Stack Developer"</span><span class="t-punct">,</span>
+            </div>
+            <div class="terminal-line">
+              &nbsp;&nbsp;<span class="t-param">frontEnd</span><span class="t-punct">: [</span>
+              <span class="t-string">"HTML5"</span><span class="t-punct">,</span>
+              <span class="t-string"> "CSS3"</span><span class="t-punct">,</span>
+              <span class="t-string"> "JavaScript"</span><span class="t-punct">,</span>
+              <span class="t-string"> "React"</span><span class="t-punct">],</span>
+            </div>
+            <div class="terminal-line">
+              &nbsp;&nbsp;<span class="t-param">aprendendoBackEnd</span><span class="t-punct">: [</span>
+              <span class="t-string">"Node.js"</span><span class="t-punct">,</span>
+              <span class="t-string"> "PHP"</span><span class="t-punct">,</span>
+              <span class="t-string"> "Java"</span><span class="t-punct">],</span>
+            </div>
+            <div class="terminal-line">
+              &nbsp;&nbsp;<span class="t-param">disponivel</span><span class="t-punct">:</span>
+              <span class="t-keyword"> true</span>
+            </div>
+            <div class="terminal-line">
+              <span class="t-punct">};</span>
+            </div>
+            <div class="terminal-line">&nbsp;</div>
+            <div class="terminal-line">
+              <span class="t-fn">console</span><span class="t-punct">.</span><span class="t-fn">log</span><span class="t-punct">(</span><span class="t-string">"Pronto para aprender, colaborar e criar soluções!"</span><span class="t-punct">);</span>
+            </div>
+            <div class="terminal-line">&nbsp;</div>
+            <div class="terminal-line">
+              <span class="terminal-prompt">$</span>
+              <span class="t-string">"Status: Dedicação total &amp; evolução constante 🚀"</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     ABOUT SECTION
+     ============================================================ -->
+<section id="about" class="section-padding">
+  <div class="container">
+    <div class="row align-items-center g-5">
+
+      <!-- Esquerda: Imagem/Avatar -->
+      <div class="col-lg-5 text-center reveal-left">
+        <div class="about-image-wrapper">
+          <div class="about-image-frame">
+            <div class="about-avatar-placeholder">
+              <div class="about-avatar-initials">WM</div>
+              <div style="font-size:0.85rem; color:var(--accent-primary); font-family: var(--font-mono); margin-top: 5px;">
+                williammateta.dev
+              </div>
+            </div>
+          </div>
+
+          <div class="about-corner-deco tl" aria-hidden="true"></div>
+          <div class="about-corner-deco br" aria-hidden="true"></div>
+
+          <div class="about-badge">🟢 Disponível para Oportunidades</div>
+        </div>
+      </div>
+
+      <!-- Direita: Perfil & Formação -->
+      <div class="col-lg-7 reveal-right">
+        <span class="section-label">Sobre Mim</span>
+        <h2 class="section-title">
+          Técnico em Informática com Paixão por <span class="gradient-text">Desenvolvimento Web</span>
+        </h2>
+
+        <p class="about-bio">
+          Sou <strong>Técnico Médio em Informática</strong> formado pelo <strong>Instituto Politécnico Privado Anherc (I.P.P.A)</strong>, com histórico prático em manutenção preventiva/corretiva e suporte a sistemas.
+        </p>
+        <p class="about-bio">
+          Tenho como meta sólida a atuação como <strong>Desenvolvedor Full Stack</strong>, iniciando minha trajetória com foco e disciplina no <strong>Front-End</strong> (HTML5, CSS3, JavaScript, React). Possuo grande facilidade de aprendizado, boa comunicação e espírito de equipa para agregar valor a equipas de tecnologia e projetos desafiadores.
+        </p>
+
+        <!-- Informações Pessoais & Formação -->
+        <div class="row g-3 my-3">
+          <div class="col-sm-6">
+            <div class="p-3" style="background: var(--surface-card); border-radius: 8px; border: 1px solid var(--border-color);">
+              <div style="color: var(--accent-primary); font-size: 0.85rem; font-weight: 600;">FORMAÇÃO</div>
+              <div style="font-weight: 500; font-size: 0.95rem;">Técnico Médio em Informática</div>
+              <div style="color: var(--text-muted); font-size: 0.85rem;">Inst. Politécnico Privado Anherc</div>
+            </div>
+          </div>
+          <div class="col-sm-6">
+            <div class="p-3" style="background: var(--surface-card); border-radius: 8px; border: 1px solid var(--border-color);">
+              <div style="color: var(--accent-primary); font-size: 0.85rem; font-weight: 600;">LOCALIZAÇÃO</div>
+              <div style="font-weight: 500; font-size: 0.95rem;">Cacuaco — Luanda</div>
+              <div style="color: var(--text-muted); font-size: 0.85rem;">Angola (Aberto a Remoto / Presencial)</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Estatísticas Práticas -->
+        <div class="about-stats">
+          <div class="stat-item">
+            <div class="stat-number" data-target="3" data-suffix="+">0+</div>
+            <div class="stat-label">Anos em TI / Suporte</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-number" data-target="100" data-suffix="%">0%</div>
+            <div class="stat-label">Dedicação & Foco</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-number" data-target="10" data-suffix="+">0+</div>
+            <div class="stat-label">Cursos & Certificados</div>
+          </div>
+        </div>
+
+        <div class="mt-4">
+          <a href="CV_William_Mateta.pdf" download="CV_William_Mateta.pdf" class="btn-primary-custom d-inline-flex">
+            <i class="fa-solid fa-download"></i>
+            Baixar Currículo Completo (PDF)
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     SKILLS SECTION
+     ============================================================ -->
+<section id="skills" class="section-padding">
+  <div class="dots-bg" aria-hidden="true"></div>
+
+  <div class="container position-relative">
+
+    <!-- Cabeçalho -->
+    <div class="row justify-content-center text-center mb-5">
+      <div class="col-lg-8 reveal">
+        <span class="section-label">Tecnologias &amp; Conhecimentos</span>
+        <h2 class="section-title">Minha Caixa de Ferramentas</h2>
+        <p class="section-subtitle mx-auto">
+          Dominando o <strong>Front-End</strong> e construindo a base completa para me tornar <strong>Full Stack</strong>.
+        </p>
+      </div>
+    </div>
+
+    <!-- 1. Front-End (Foco Principal) -->
+    <div class="mb-5">
+      <div class="reveal">
+        <span class="skills-category-title">
+          <i class="fa-solid fa-code me-2" style="color: var(--accent-primary);"></i> Front-End (Foco Ativo)
+        </span>
+      </div>
+      <div class="row g-3">
+
+        <div class="col-6 col-md-4 col-lg-3 reveal reveal-delay-1">
+          <div class="skill-card text-center">
+            <div class="skill-icon mx-auto" style="color:#e34f26;">
+              <i class="fa-brands fa-html5"></i>
+            </div>
+            <div class="skill-name">HTML5</div>
+            <div class="skill-bar-track">
+              <div class="skill-bar-fill" data-width="90"></div>
+            </div>
+            <div class="skill-level">Estrutura & Semântica (90%)</div>
+          </div>
+        </div>
+
+        <div class="col-6 col-md-4 col-lg-3 reveal reveal-delay-2">
+          <div class="skill-card text-center">
+            <div class="skill-icon mx-auto" style="color:#264de4;">
+              <i class="fa-brands fa-css3-alt"></i>
+            </div>
+            <div class="skill-name">CSS3 & Responsividade</div>
+            <div class="skill-bar-track">
+              <div class="skill-bar-fill" data-width="85"></div>
+            </div>
+            <div class="skill-level">Flexbox, Grid & Media Queries (85%)</div>
+          </div>
+        </div>
+
+        <div class="col-6 col-md-4 col-lg-3 reveal reveal-delay-3">
+          <div class="skill-card text-center">
+            <div class="skill-icon mx-auto" style="color:#f7df1e;">
+              <i class="fa-brands fa-js"></i>
+            </div>
+            <div class="skill-name">JavaScript</div>
+            <div class="skill-bar-track">
+              <div class="skill-bar-fill" data-width="75"></div>
+            </div>
+            <div class="skill-level">DOM, Funções & Lógica (75%)</div>
+          </div>
+        </div>
+
+        <div class="col-6 col-md-4 col-lg-3 reveal reveal-delay-4">
+          <div class="skill-card text-center">
+            <div class="skill-icon mx-auto" style="color:#61dafb;">
+              <i class="fa-brands fa-react"></i>
+            </div>
+            <div class="skill-name">React</div>
+            <div class="skill-bar-track">
+              <div class="skill-bar-fill" data-width="60"></div>
+            </div>
+            <div class="skill-level">Componentes & Hooks (Em estudo ativo)</div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- 2. Back-End & Lógica (Trilha Full Stack) -->
+    <div class="mb-5">
+      <div class="reveal">
+        <span class="skills-category-title">
+          <i class="fa-solid fa-server me-2" style="color: var(--accent-secondary);"></i> Trilha Back-End (Caminho Full Stack)
+        </span>
+      </div>
+      <div class="row g-3">
+
+        <div class="col-6 col-md-4 col-lg-3 reveal reveal-delay-1">
+          <div class="skill-card text-center">
+            <div class="skill-icon mx-auto" style="color:#00d4aa;">
+              <i class="fa-solid fa-brain"></i>
+            </div>
+            <div class="skill-name">Lógica de Programação</div>
+            <div class="skill-bar-track">
+              <div class="skill-bar-fill" data-width="85"></div>
+            </div>
+            <div class="skill-level">Algoritmos & Resolução de Problemas</div>
+          </div>
+        </div>
+
+        <div class="col-6 col-md-4 col-lg-3 reveal reveal-delay-2">
+          <div class="skill-card text-center">
+            <div class="skill-icon mx-auto" style="color:#777bb4;">
+              <i class="fa-brands fa-php"></i>
+            </div>
+            <div class="skill-name">PHP</div>
+            <div class="skill-bar-track">
+              <div class="skill-bar-fill" data-width="50"></div>
+            </div>
+            <div class="skill-level">Fundamentos & Integração Web</div>
+          </div>
+        </div>
+
+        <div class="col-6 col-md-4 col-lg-3 reveal reveal-delay-3">
+          <div class="skill-card text-center">
+            <div class="skill-icon mx-auto" style="color:#e76f00;">
+              <i class="fa-brands fa-java"></i>
+            </div>
+            <div class="skill-name">Java</div>
+            <div class="skill-bar-track">
+              <div class="skill-bar-fill" data-width="50"></div>
+            </div>
+            <div class="skill-level">Conceitos de POO</div>
+          </div>
+        </div>
+
+        <div class="col-6 col-md-4 col-lg-3 reveal reveal-delay-4">
+          <div class="skill-card text-center">
+            <div class="skill-icon mx-auto" style="color:#339933;">
+              <i class="fa-brands fa-node-js"></i>
+            </div>
+            <div class="skill-name">Node.js</div>
+            <div class="skill-bar-track">
+              <div class="skill-bar-fill" data-width="50"></div>
+            </div>
+            <div class="skill-level">APIs REST & Servidores Web</div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- 3. TI, Suporte e Soft Skills -->
+    <div>
+      <div class="reveal">
+        <span class="skills-category-title">
+          <i class="fa-solid fa-screwdriver-wrench me-2"></i> TI, Ferramentas & Soft Skills
+        </span>
+      </div>
+      <div class="row g-3">
+
+        <div class="col-6 col-md-4 col-lg-3 reveal reveal-delay-1">
+          <div class="skill-card text-center">
+            <div class="skill-icon mx-auto" style="color:#f05032;">
+              <i class="fa-brands fa-git-alt"></i>
+            </div>
+            <div class="skill-name">Git & GitHub</div>
+            <div class="skill-bar-track">
+              <div class="skill-bar-fill" data-width="70"></div>
+            </div>
+            <div class="skill-level">Versionamento & Commits</div>
+          </div>
+        </div>
+
+        <div class="col-6 col-md-4 col-lg-3 reveal reveal-delay-2">
+          <div class="skill-card text-center">
+            <div class="skill-icon mx-auto" style="color:#007acc;">
+              <i class="fa-solid fa-laptop-code"></i>
+            </div>
+            <div class="skill-name">Suporte & Manutenção</div>
+            <div class="skill-bar-track">
+              <div class="skill-bar-fill" data-width="90"></div>
+            </div>
+            <div class="skill-level">Hardware, Redes & Software (3 anos)</div>
+          </div>
+        </div>
+
+        <div class="col-6 col-md-4 col-lg-3 reveal reveal-delay-3">
+          <div class="skill-card text-center">
+            <div class="skill-icon mx-auto" style="color:#00d4aa;">
+              <i class="fa-solid fa-users"></i>
+            </div>
+            <div class="skill-name">Comunicação & Equipa</div>
+            <div class="skill-bar-track">
+              <div class="skill-bar-fill" data-width="95"></div>
+            </div>
+            <div class="skill-level">Atendimento & Colaboração</div>
+          </div>
+        </div>
+
+        <div class="col-6 col-md-4 col-lg-3 reveal reveal-delay-4">
+          <div class="skill-card text-center">
+            <div class="skill-icon mx-auto" style="color:#ffb703;">
+              <i class="fa-solid fa-bolt"></i>
+            </div>
+            <div class="skill-name">Aprendizado Rápido</div>
+            <div class="skill-bar-track">
+              <div class="skill-bar-fill" data-width="95"></div>
+            </div>
+            <div class="skill-level">Autonomia, Foco & Curiosidade</div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ============================================================
+     PROJECTS SECTION
+     ============================================================ -->
+<section id="projects" class="section-padding">
+  <div class="container">
+
+    <div class="row justify-content-center text-center mb-5">
+      <div class="col-lg-8 reveal">
+        <span class="section-label">Projetos & Portfólio</span>
+        <h2 class="section-title">O Que Estou Construindo</h2>
+        <p class="section-subtitle mx-auto">
+          Projetos práticos demonstrando código limpo, interfaces modernas e responsividade.
+        </p>
+      </div>
+    </div>
+
+    <div class="row g-4">
+
+      <!-- Projeto 1: Portfólio Trace Developer -->
+      <div class="col-md-6 col-xl-4 reveal reveal-delay-1">
+        <div class="project-card">
+          <div class="project-preview" style="background: linear-gradient(135deg, #0a0e17 0%, #16213e 50%, #00d4aa33 100%);">
+            <div class="project-preview-inner">
+              <div class="project-preview-name">Dev Portfolio</div>
+              <div class="project-preview-icon" aria-hidden="true">
+                <i class="fa-solid fa-desktop"></i>
+              </div>
+            </div>
+          </div>
+          <div class="project-body">
+            <div class="project-featured-badge">// Destaque Front-End</div>
+            <h3 class="project-title">Portfólio Dark Theme</h3>
+            <p class="project-desc">
+              Landing page responsiva com tema escuro, animação de partículas em Canvas, efeito de digitação dinâmico, animações com Intersection Observer e terminal interativo.
+            </p>
+            <div class="project-tags">
+              <span class="project-tag">HTML5</span>
+              <span class="project-tag">CSS3</span>
+              <span class="project-tag">JavaScript</span>
+              <span class="project-tag">Bootstrap 5</span>
+            </div>
+            <div class="project-links">
+              <a href="#hero" class="btn-project btn-project-filled">
+                <i class="fa-solid fa-arrow-up-right-from-square"></i> Ver Aqui Mesmo
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Projeto 2: Interface Web Responsiva -->
+      <div class="col-md-6 col-xl-4 reveal reveal-delay-2">
+        <div class="project-card">
+          <div class="project-preview" style="background: linear-gradient(135deg, #111827 0%, #1f2937 50%, #3b82f633 100%);">
+            <div class="project-preview-inner">
+              <div class="project-preview-name">UI / Dashboards</div>
+              <div class="project-preview-icon" aria-hidden="true">
+                <i class="fa-solid fa-chart-pie"></i>
+              </div>
+            </div>
+          </div>
+          <div class="project-body">
+            <div class="project-featured-badge">// Em Desenvolvimento</div>
+            <h3 class="project-title">Dashboard &amp; Componentes Web</h3>
+            <p class="project-desc">
+              Conjunto de componentes reutilizáveis focados em experiência do utilizador (UX): tabelas dinâmicas, modais, filtros e validação de formulários em tempo real.
+            </p>
+            <div class="project-tags">
+              <span class="project-tag">JavaScript</span>
+              <span class="project-tag">CSS Flex/Grid</span>
+              <span class="project-tag">React (Estudo)</span>
+            </div>
+            <div class="project-links">
+              <a href="#contact" class="btn-project btn-project-outline">
+                <i class="fa-solid fa-code-branch"></i> Em Criação
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Projeto 3: Trilha Full Stack -->
+      <div class="col-md-6 col-xl-4 reveal reveal-delay-3">
+        <div class="project-card">
+          <div class="project-preview" style="background: linear-gradient(135deg, #0d1117 0%, #21262d 50%, #61dafb33 100%);">
+            <div class="project-preview-inner">
+              <div class="project-preview-name">API &amp; Full Stack</div>
+              <div class="project-preview-icon" aria-hidden="true">
+                <i class="fa-solid fa-network-wired"></i>
+              </div>
+            </div>
+          </div>
+          <div class="project-body">
+            <div class="project-featured-badge">// Roteiro Full Stack</div>
+            <h3 class="project-title">Sistema de Gestão &amp; Suporte</h3>
+            <p class="project-desc">
+              Aplicação para controle de chamados de suporte técnico, integrando frontend moderno com endpoints de backend e banco de dados.
+            </p>
+            <div class="project-tags">
+              <span class="project-tag">Front-End</span>
+              <span class="project-tag">Node / PHP</span>
+              <span class="project-tag">SQL</span>
+            </div>
+            <div class="project-links">
+              <a href="#contact" class="btn-project btn-project-outline">
+                <i class="fa-solid fa-lightbulb"></i> Em Planeamento
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<!-- ============================================================
+     EXPERIENCE TIMELINE
+     ============================================================ -->
+<section id="experience" class="section-padding">
+  <div class="dots-bg" aria-hidden="true"></div>
+
+  <div class="container position-relative">
+
+    <div class="row justify-content-center text-center mb-5">
+      <div class="col-lg-8 reveal">
+        <span class="section-label">Percurso Profissional</span>
+        <h2 class="section-title">Experiência &amp; Formação</h2>
+        <p class="section-subtitle mx-auto">
+          Uma trajetória sólida de suporte, manutenção técnica e evolução contínua em programação.
+        </p>
+      </div>
+    </div>
+
+    <div class="timeline">
+
+      <!-- Item 1: Rota Full Stack -->
+      <div class="timeline-item reveal-right">
+        <div class="timeline-dot" aria-hidden="true"></div>
+        <div class="timeline-content">
+          <div class="timeline-date">2024 — Presente</div>
+          <div class="timeline-role">Desenvolvedor Front-End (Rumo a Full Stack)</div>
+          <div class="timeline-company">
+            <i class="fa-solid fa-code me-1"></i> Projetos Práticos &amp; Estudos Intensivos
+          </div>
+          <ul class="timeline-desc">
+            <li>Desenvolvimento de layouts responsivos com HTML5, CSS3 moderno e JavaScript puro.</li>
+            <li>Início do aprendizado prático com React e componentização.</li>
+            <li>Estudo contínuo de lógica de programação, APIs e noções de backend (Node.js/PHP/Java).</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Item 2: Manutenção de Software -->
+      <div class="timeline-item reveal-left">
+        <div class="timeline-dot" aria-hidden="true"></div>
+        <div class="timeline-content">
+          <div class="timeline-date">Duração: 2 anos</div>
+          <div class="timeline-role">Manutenção e Implementação de Software</div>
+          <div class="timeline-company">
+            <i class="fa-solid fa-user-gear me-1"></i> Trabalho por Conta Própria
+          </div>
+          <ul class="timeline-desc">
+            <li>Instalação, configuração e atualização de sistemas operacionais e aplicações.</li>
+            <li>Resolução de problemas de compatibilidade e otimização de desempenho de estações de trabalho.</li>
+            <li>Atendimento direto a utilizadores com foco na satisfação e resolução ágil.</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Item 3: Assistente de Informática -->
+      <div class="timeline-item reveal-right">
+        <div class="timeline-dot" aria-hidden="true"></div>
+        <div class="timeline-content">
+          <div class="timeline-date">Duração: 1 ano</div>
+          <div class="timeline-role">Assistente de Informática</div>
+          <div class="timeline-company">
+            <i class="fa-solid fa-laptop me-1"></i> Trabalho por Conta Própria
+          </div>
+          <ul class="timeline-desc">
+            <li>Suporte técnico aos utilizadores em softwares de produtividade e conectividade.</li>
+            <li>Manutenção preventiva e corretiva de hardware e periféricos.</li>
+            <li>Orientação básica e treinamento de utilizadores para boas práticas de TI.</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Item 4: Formação Acadêmica -->
+      <div class="timeline-item reveal-left">
+        <div class="timeline-dot" aria-hidden="true"></div>
+        <div class="timeline-content">
+          <div class="timeline-date">Concluído</div>
+          <div class="timeline-role">Técnico Médio em Informática</div>
+          <div class="timeline-company">
+            <i class="fa-solid fa-graduation-cap me-1"></i> Instituto Politécnico Privado Anherc (I.P.P.A)
+          </div>
+          <ul class="timeline-desc">
+            <li>Formação ampla em informática, redes, arquitetura de computadores e introdução à programação.</li>
+            <li>Cursos adicionais: Informática na Óptica do Utilizador, Atendimento ao Público e Secretariado Geral.</li>
+            <li>Base sólida de responsabilidade, trabalho em equipa e ética profissional.</li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<!-- ============================================================
+     CONTACT SECTION
+     ============================================================ -->
+<section id="contact" class="section-padding">
+  <div class="container">
+
+    <div class="row justify-content-center text-center mb-5">
+      <div class="col-lg-8 reveal">
+        <span class="section-label">Entre em Contacto</span>
+        <h2 class="section-title">Vamos Trabalhar Juntos?</h2>
+        <p class="section-subtitle mx-auto">
+          Estou pronto para contribuir na sua equipa ou colaborar em novos projetos. Fique à vontade para me enviar uma mensagem!
+        </p>
+      </div>
+    </div>
+
+    <div class="row g-5 align-items-start">
+
+      <!-- Informações de Contato -->
+      <div class="col-lg-5 reveal-left">
+
+        <div class="contact-info-item">
+          <div class="contact-icon-wrap">
+            <i class="fa-solid fa-envelope"></i>
+          </div>
+          <div>
+            <div class="contact-info-label">Email Principal</div>
+            <div class="contact-info-value">
+              <a href="mailto:williammateta.dev@gmail.com">williammateta.dev@gmail.com</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="contact-info-item">
+          <div class="contact-icon-wrap">
+            <i class="fa-brands fa-whatsapp"></i>
+          </div>
+          <div>
+            <div class="contact-info-label">Telemóvel / WhatsApp</div>
+            <div class="contact-info-value">
+              <a href="https://wa.me/244932651805" target="_blank" rel="noopener noreferrer">+244 932 651 805</a> / +244 954 918 699
+            </div>
+          </div>
+        </div>
+
+        <div class="contact-info-item">
+          <div class="contact-icon-wrap">
+            <i class="fa-solid fa-location-dot"></i>
+          </div>
+          <div>
+            <div class="contact-info-label">Localização</div>
+            <div class="contact-info-value">Bairro Nova Urbanização, Cacuaco — Luanda, Angola</div>
+          </div>
+        </div>
+
+        <div class="contact-info-item">
+          <div class="contact-icon-wrap">
+            <i class="fa-solid fa-briefcase"></i>
+          </div>
+          <div>
+            <div class="contact-info-label">Disponibilidade</div>
+            <div class="contact-info-value">
+              <span style="color:var(--accent-primary);">● </span>Disponível para trabalho presencial, híbrido ou remoto
+            </div>
+          </div>
+        </div>
+
+        <!-- Links Sociais -->
+        <div class="contact-social-row">
+          <a href="mailto:williammateta.dev@gmail.com" class="contact-social-link" aria-label="Email" title="Email">
+            <i class="fa-solid fa-envelope"></i>
+          </a>
+          <a href="https://wa.me/244932651805" target="_blank" rel="noopener noreferrer" class="contact-social-link" aria-label="WhatsApp" title="WhatsApp">
+            <i class="fa-brands fa-whatsapp"></i>
+          </a>
+          <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="contact-social-link" aria-label="GitHub" title="GitHub">
+            <i class="fa-brands fa-github"></i>
+          </a>
+          <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="contact-social-link" aria-label="LinkedIn" title="LinkedIn">
+            <i class="fa-brands fa-linkedin-in"></i>
+          </a>
+        </div>
+
+      </div>
+
+      <!-- Formulário de Contato -->
+      <div class="col-lg-7 reveal-right">
+        <div class="contact-form-wrapper">
+
+          <form id="contactForm" novalidate>
+
+            <div class="row g-3 mb-3">
+              <div class="col-md-6">
+                <label class="form-label-custom" for="contactName">Seu Nome</label>
+                <input
+                  type="text"
+                  id="contactName"
+                  class="form-control-custom"
+                  placeholder="Ex: João Silva"
+                  required
+                />
+              </div>
+              <div class="col-md-6">
+                <label class="form-label-custom" for="contactEmail">Seu Email</label>
+                <input
+                  type="email"
+                  id="contactEmail"
+                  class="form-control-custom"
+                  placeholder="joao@empresa.com"
+                  required
+                />
+              </div>
+            </div>
+
+            <div class="mb-3">
+              <label class="form-label-custom" for="contactSubject">Assunto</label>
+              <input
+                type="text"
+                id="contactSubject"
+                class="form-control-custom"
+                placeholder="Oportunidade / Projeto / Conversa"
+              />
+            </div>
+
+            <div class="mb-4">
+              <label class="form-label-custom" for="contactMessage">Mensagem</label>
+              <textarea
+                id="contactMessage"
+                class="form-control-custom"
+                placeholder="Olá William, gostaria de conversar sobre..."
+                rows="4"
+                required
+              ></textarea>
+            </div>
+
+            <button type="submit" class="btn-send">
+              <i class="fa-solid fa-paper-plane"></i>
+              Enviar Mensagem
+            </button>
+
+          </form>
+
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<!-- ============================================================
+     FOOTER
+     ============================================================ -->
+<footer id="footer">
+  <div class="container">
+
+    <div class="row align-items-center">
+      <div class="col-md-6">
+        <div class="footer-brand">WM<span class="accent">.</span>dev</div>
+        <div class="footer-tagline">William Mateta · Front-End Developer &amp; Futuro Full Stack</div>
+      </div>
+
+      <div class="col-md-6">
+        <div class="footer-socials">
+          <a href="mailto:williammateta.dev@gmail.com" class="contact-social-link" aria-label="Email">
+            <i class="fa-solid fa-envelope"></i>
+          </a>
+          <a href="https://wa.me/244932651805" target="_blank" rel="noopener noreferrer" class="contact-social-link" aria-label="WhatsApp">
+            <i class="fa-brands fa-whatsapp"></i>
+          </a>
+          <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="contact-social-link" aria-label="GitHub">
+            <i class="fa-brands fa-github"></i>
+          </a>
+          <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="contact-social-link" aria-label="LinkedIn">
+            <i class="fa-brands fa-linkedin-in"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-divider"></div>
+
+    <div class="row align-items-center">
+      <div class="col-md-6">
+        <p class="footer-copy mb-0">
+          &copy; 2026 <span>William André Mushi Mateta</span>. Todos os direitos reservados.
+        </p>
+      </div>
+      <div class="col-md-6 text-md-end">
+        <p class="footer-copy mb-0">
+          Inspirado em Colorlib Trace Developer &mdash;
+          <a href="#hero" style="color:var(--accent-primary);">Voltar ao topo ↑</a>
+        </p>
+      </div>
+    </div>
+
+  </div>
+</footer>
+
+<!-- Toast Container -->
+<div id="toast" class="custom-toast" role="alert" aria-live="assertive"></div>
+
+<!-- Bootstrap 5.3 JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- Custom JS -->
+<script src="script.js"></script>
+
+</body>
+</html>
