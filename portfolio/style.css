@@ -1441,3 +1441,12 @@ textarea.form-control-custom {
 .toast-notification i {
   color: var(--accent-primary);
 }
+
+.toast-notification.toast-error {
+  border-color: #ef4444;
+  box-shadow: 0 0 30px rgba(239, 68, 68, 0.2);
+}
+
+.toast-notification.toast-error i {
+  color: #ef4444;
+}

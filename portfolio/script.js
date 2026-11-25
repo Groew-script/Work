@@ -291,32 +291,7 @@ function initScrollReveal() {
 }
 
 // ============================================
-// 5. SKILL BARS (animated on scroll into view)
-// ============================================
-
-function initSkillBars() {
-  const bars = $$('.skill-bar-fill');
-  if (!bars.length) return;
-
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        const bar  = entry.target;
-        const pct  = bar.dataset.width || '0';
-        // Small delay so the section reveal animation finishes first
-        setTimeout(() => {
-          bar.style.width = pct + '%';
-        }, 300);
-        observer.unobserve(bar);
-      }
-    });
-  }, { threshold: 0.3 });
-
-  bars.forEach((bar) => observer.observe(bar));
-}
-
-// ============================================
-// 6. CONTACT FORM (simulation)
+// 5. CONTACT FORM
 // ============================================
 
 function initContactForm() {
@@ -326,23 +301,58 @@ function initContactForm() {
   form.addEventListener('submit', (e) => {
     e.preventDefault();
 
+    const nameInput    = $('#contactName');
+    const emailInput   = $('#contactEmail');
+    const subjectInput = $('#contactSubject');
+    const msgInput     = $('#contactMessage');
+
+    const name    = nameInput ? nameInput.value.trim() : '';
+    const email   = emailInput ? emailInput.value.trim() : '';
+    const subject = subjectInput ? subjectInput.value.trim() : '';
+    const message = msgInput ? msgInput.value.trim() : '';
+
+    if (!name) {
+      showToast('Por favor, preenche o seu nome.', 'error');
+      if (nameInput) nameInput.focus();
+      return;
+    }
+
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!email || !emailRegex.test(email)) {
+      showToast('Por favor, insere um e-mail válido.', 'error');
+      if (emailInput) emailInput.focus();
+      return;
+    }
+
+    if (!message) {
+      showToast('Por favor, escreve a tua mensagem.', 'error');
+      if (msgInput) msgInput.focus();
+      return;
+    }
+
     const btn      = form.querySelector('.btn-send');
     const origHTML = btn.innerHTML;
 
-    // Simulate sending
-    btn.innerHTML  = '<i class="fa-solid fa-spinner fa-spin"></i> A enviar...';
-    btn.disabled   = true;
+    btn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> A preparar envio...';
+    btn.disabled  = true;
+
+    const mailSubject = encodeURIComponent(subject || `Contacto via Portfólio — ${name}`);
+    const mailBody    = encodeURIComponent(
+      `Nome: ${name}\nEmail: ${email}\n\nMensagem:\n${message}`
+    );
+    const mailtoUrl   = `mailto:williammateta.dev@gmail.com?subject=${mailSubject}&body=${mailBody}`;
 
     setTimeout(() => {
-      btn.innerHTML = '<i class="fa-solid fa-check"></i> Mensagem Enviada!';
-      showToast('Mensagem enviada com sucesso! Entrarei em contacto em breve.');
+      window.location.href = mailtoUrl;
+      btn.innerHTML = '<i class="fa-solid fa-check"></i> Cliente de E-mail Aberto!';
+      showToast('A abrir o seu cliente de e-mail para concluir o envio.');
       form.reset();
 
       setTimeout(() => {
         btn.innerHTML = origHTML;
         btn.disabled  = false;
       }, 3000);
-    }, 1800);
+    }, 500);
   });
 }
 
@@ -350,14 +360,15 @@ function initContactForm() {
 // 7. TOAST NOTIFICATION
 // ============================================
 
-function showToast(message) {
+function showToast(message, type = 'success') {
   // Remove existing toast
   const existing = $('.toast-notification');
   if (existing) existing.remove();
 
+  const iconClass = type === 'error' ? 'fa-circle-exclamation' : 'fa-circle-check';
   const toast = document.createElement('div');
-  toast.className  = 'toast-notification';
-  toast.innerHTML  = `<i class="fa-solid fa-circle-check"></i> ${message}`;
+  toast.className  = `toast-notification${type === 'error' ? ' toast-error' : ''}`;
+  toast.innerHTML  = `<i class="fa-solid ${iconClass}"></i> ${message}`;
   document.body.appendChild(toast);
 
   // Trigger show
